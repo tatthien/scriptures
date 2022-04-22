@@ -1,5 +1,5 @@
 [[redirects]]
 force = true
-from = '/api/*'
+from = "/api/*"
+to = "http://167.71.208.237:7700/:splat"
 status = 200
-to = 'http://167.71.208.237:7700'
