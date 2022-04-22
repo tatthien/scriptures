@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <h1 class="app-title">Scripture</h1>
+    <h1 class="app-title">Scriptures</h1>
     <ais-instant-search :search-client="searchClient" index-name="scriptures">
       <ais-search-box placeholder="Ban dau Duc Chua Troi..., gi 3 16" />
       <ais-infinite-hits>
