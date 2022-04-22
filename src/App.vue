@@ -3,6 +3,20 @@
     <h1 class="app-title">Scriptures</h1>
     <ais-instant-search :search-client="searchClient" index-name="scriptures">
       <ais-search-box placeholder="Ban dau Duc Chua Troi..., gi 3 16" />
+      <ais-stats>
+        <template #default="{ processingTimeMS, nbHits }">
+          <div class="stats">
+            <div class="stats-item">
+              <span>Hits</span>
+              <span>{{ nbHits.toLocaleString() }}</span>
+            </div>
+            <div class="stats-item">
+              <span>Time spent</span>
+              <span>{{ processingTimeMS.toLocaleString() }} ms</span>
+            </div>
+          </div>
+        </template>
+      </ais-stats>
       <ais-infinite-hits>
         <template #item="{ item }">
           <div>
@@ -44,6 +58,9 @@ export default defineComponent({
     const searchClient = instantMeiliSearch(
       `${import.meta.env.VITE_BASE_URL}/api`,
       import.meta.env.VITE_MEILI_API_KEY,
+      {
+        primaryKey: 'id',
+      }
     )
 
     return {

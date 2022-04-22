@@ -121,7 +121,11 @@ mark {
 }
 
 .ais-InfiniteHits-loadMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: .25rem 1rem;
+  margin: 0 auto;
   font-size: 1rem;
   font-weight: 600;
   color: var(--color-primary);
@@ -129,6 +133,11 @@ mark {
   background: none;
   border: 2px solid var(--color-primary);
   border-radius: .5rem;
+}
+
+.ais-InfiniteHits-loadMore--disabled {
+  cursor: not-allowed;
+  opacity: .5;
 }
 
 .read-more {
@@ -139,4 +148,21 @@ mark {
 
 .read-more:hover {
   text-decoration: underline;
+}
+
+.stats {
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.stats-item span:first-child {
+  display: block;
+  min-width: 8rem;
+  color: rgb(187, 193, 207);
+}
+
+.stats-item span:last-child {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
 }
