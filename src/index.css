@@ -21,6 +21,7 @@ body {
 .app-title {
   margin-bottom: 2rem;
   font-size: 4rem;
+  color: rgb(96 108 139);
   text-align: center;
 }
 
