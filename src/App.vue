@@ -42,7 +42,7 @@ import { instantMeiliSearch } from '@meilisearch/instant-meilisearch'
 export default defineComponent({
   setup() {
     const searchClient = instantMeiliSearch(
-      'http://localhost:3000/api',
+      `${import.meta.env.BASE_URL}/api`,
       import.meta.env.VITE_MEILI_API_KEY,
     )
 

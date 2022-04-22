@@ -10,7 +10,7 @@ export default ({ mode }) => {
     server: {
       proxy: {
         '/api': {
-          target: process.env.MEILI_HOST_NAME,
+          target: 'http://167.71.208.237:7700',
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, ''),
         }
